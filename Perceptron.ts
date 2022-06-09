@@ -34,16 +34,16 @@ export default class Perceptron {
     }
   };
   private run = (inputs: number[]) => {
-    var sum = 0;
+    let sum = 0;
 
-    for (var m = 0; m < inputs.length; m++) {
+    for (let m = 0; m < inputs.length; m++) {
       sum += inputs[m] * this.weights[m];
     }
     sum += this.bias;
     return this.activation().sigmoid(sum);
   };
   private recalcWeights = (val: number, inputs: number[]) => {
-    for (var j = 0; j < this.weights.length; j++) {
+    for (let j = 0; j < this.weights.length; j++) {
       this.weights[j] = this.weights[j] + this.learnRate * val * inputs[j];
     }
   };
