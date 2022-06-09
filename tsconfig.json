@@ -21,7 +21,8 @@
       "sourceMap": true,
       "strict": true,
       "strictNullChecks": true,
-      "moduleResolution": "node"
+      "moduleResolution": "node",
+      "outDir": "dist"
     },
     "include": ["*.ts"],
   }
